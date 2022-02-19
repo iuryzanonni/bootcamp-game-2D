@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    font-family: 'Stint Ultra Condensed', cursive;
+    font-size: 150px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+body{
+    background-image: url(../assets/backgroud-game.png);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+}
+
+button{
+    font-family: 'Stint Ultra Condensed', cursive;
+    font-size: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin:5px;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+}
+
+#start{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+#player{
+    width:256px;
+	height:66px;
+	position:absolute;
+	left:8px;
+	top:179px;
+    background-color: blue;
+}
+
+#enemy-1 {
+	width: 256px;
+	height: 66px;
+	position: absolute;
+	left: 1850px;
+	top: 253px;
+    background-color: rgb(255, 0, 0);
+}
+
+#enemy-2 {
+	width: 165px;
+	height: 70px;
+	position: absolute;
+	left: 1960px;
+	top: 880px;
+    background-color: rgb(255, 0, 0);
+}
+
+#friend {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 10px;
+	top: 880px;
+    background-color: rgb(0, 177, 68);
+}
+
+
+/*
+    Six Caps
+    Stint Ultra Condensed
+*/
