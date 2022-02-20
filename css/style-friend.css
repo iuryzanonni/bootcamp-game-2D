@@ -1,0 +1,35 @@
+:root{
+    --sprite-friend: url(../assets/sprite-friend.png);
+    --prop: 0.4;
+    --speed: 0.8s;
+    --width-image: calc(363px * var(--prop));
+    --height-image: calc(458px * var(--prop));
+    --size: 1000%;
+    --size-image: calc(-3630px * var(--prop));
+}
+
+#friend {
+	width: var(--width-image);
+	height: var(--height-image);
+	position: absolute;
+	left: 10px;
+	top: 820px;
+    background-image: var(--sprite-friend);
+    background-size: var(--size);
+    background-repeat: no-repeat;
+}
+
+.animationfriend{
+    background-image: var(--sprite-friend);
+    animation: playFriend var(--speed) steps(10) infinite;
+
+    /* -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite; */
+}
+
+@keyframes playFriend {
+    from {background-position: 0px;}
+    to {background-position: var(--size-image);}
+}

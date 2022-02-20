@@ -1,0 +1,59 @@
+:root{
+    --width: 1920px;
+    --height: 1040px;
+}
+
+#blur{
+    backdrop-filter: blur(1px);
+    width: 1920px;
+    height: 1080px;
+}
+
+#parallax-7{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/7.png);
+}
+
+#parallax-6{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/6.png);
+}
+
+#parallax-5{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/5.png);
+}
+
+#parallax-4{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/4.png);
+}
+
+#parallax-3{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/3.png);
+}
+
+#parallax-2{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/2.png);
+}
+
+#parallax-1{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    background-image: url(../assets/parallax/1.png);
+}

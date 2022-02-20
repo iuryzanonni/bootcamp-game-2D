@@ -34,6 +34,12 @@ button{
     justify-content: center;
 }
 
+#background-game{
+    backdrop-filter: blur(10px);
+    width: 1920px;
+    height: 1080px;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -45,22 +51,17 @@ button{
 #start{
     font-family: 'Ubuntu', sans-serif;
     color: white;
-}
-
-#player{
-    width:256px;
-	height:66px;
-	position:absolute;
-	left:8px;
-	top:179px;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #enemy-1 {
 	width: 256px;
 	height: 66px;
 	position: absolute;
-	left: 1850px;
+	left: 1650px;
 	top: 253px;
     background-color: rgb(255, 0, 0);
 }
@@ -69,22 +70,8 @@ button{
 	width: 165px;
 	height: 70px;
 	position: absolute;
-	left: 1960px;
-	top: 880px;
+	left: 1750px;
+	top: 820px;
     background-color: rgb(255, 0, 0);
 }
 
-#friend {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	left: 10px;
-	top: 880px;
-    background-color: rgb(0, 177, 68);
-}
-
-
-/*
-    Six Caps
-    Stint Ultra Condensed
-*/
