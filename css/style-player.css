@@ -1,49 +1,25 @@
 :root{
-    --sprite-player: url(../assets/sprite-player.png);
+    --sprite-player: url(../assets/sprite-player3.png);
+    --proportion-player: 0.13;
+    --width-sprite-player: calc(var(--width) * var(--proportion-player));
+    --height-sprite-player: calc(var(--height) * var(--proportion-player));
 }
 
 #player{
-    width:221px;
-	height:151px;
+    width: var(--width-sprite-player);
+	height: var(--height-sprite-player);/*151px;*/
 	position:absolute;
-	left:80px;
-	top:179px;
-    background-image: var(--sprite-player);
-    background-size: 200%;
-    background-repeat: no-repeat;
+	top:250px;
+    
 }
 
-.animationplayer{
+.animation-player{
     background-image: var(--sprite-player);
+    background-size: cover;
     animation: play .5s steps(2) infinite;
-
-    -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite;
 }
 
 @keyframes play {
     from {background-position: 0px;}
-    to {background-position: -443px;}
+    to {background-position: calc(var(--width-sprite-player) * 2)}
 }
-
-@-webkit-keyframes play {
-    from { background-position:0px; }
-      to { background-position: -443px; }
- }
- 
- @-moz-keyframes play {
-    from { background-position:0px; }
-      to { background-position: -443px; }
- }
- 
- @-ms-keyframes play {
-    from { background-position:0px; }
-      to { background-position: -443px; }
- }
- 
- @-o-keyframes play {
-    from { background-position:0px; }
-      to { background-position: -443px; }
- }

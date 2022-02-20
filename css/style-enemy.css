@@ -1,0 +1,54 @@
+:root{
+    --sprite-enemy-1: url(../assets/enemy1.png);
+    --proportion-enemy-1: 0.25;
+    --width-sprite-enemy-1: calc(726px * var(--proportion-enemy-1));
+    --height-sprite-enemy-1: calc(522px * var(--proportion-enemy-1));
+    --num-frames-enemy-1: 10;
+    --speed-enemy-1: 0.8s;
+
+    --sprite-enemy-2: url(../assets/enemy2.png);
+    --proportion-enemy-2: 3;
+    --width-sprite-enemy-2: calc(48px * var(--proportion-enemy-2));
+    --height-sprite-enemy-2: calc(48px * var(--proportion-enemy-2));
+    --num-frames-enemy-2: 8;
+    --speed-enemy-2: 0.8s;
+}
+
+#enemy-1 {
+	width: var(--width-sprite-enemy-1);
+	height: var(--height-sprite-enemy-1);
+	position: absolute;
+    left: calc(var(--width) - var(--width-sprite-enemy-1));
+    top: calc(var(--height) - var(--height-sprite-enemy-1) - 70px);    
+}
+
+#enemy-2 {
+	width: var(--width-sprite-enemy-2);
+	height: var(--height-sprite-enemy-2);
+	position: absolute;
+	left: calc(var(--width) - var(--width-sprite-enemy-2));
+	top: 100px;
+}
+
+.animation-enemy-1{
+    background-image: var(--sprite-enemy-1);
+    background-size: cover;
+    transform: rotateY(180deg);
+    animation: play-enemy-1 var(--speed-enemy-1) steps(var(--num-frames-enemy-1)) infinite;
+}
+
+.animation-enemy-2{
+    background-image: var(--sprite-enemy-2);
+    background-size: cover;
+    animation: play-enemy-2 var(--speed-enemy-2) steps(var(--num-frames-enemy-2)) infinite;
+}
+
+@keyframes play-enemy-1 {
+    from {background-position: 0px;}
+    to {background-position: calc(var(--width-sprite-enemy-1) * var(--num-frames-enemy-1))}
+}
+
+@keyframes play-enemy-2 {
+    from {background-position: 0px;}
+    to {background-position: calc(var(--width-sprite-enemy-2) * var(--num-frames-enemy-2))}
+}

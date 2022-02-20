@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 
+:root{
+    --width: 1600px;
+    --height: calc(var(--width) * 9 / 16);
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -36,16 +41,16 @@ button{
 
 #background-game{
     backdrop-filter: blur(10px);
-    width: 1920px;
-    height: 1080px;
+    width: var(--width);
+    height: var(--height);
 }
 
 #container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    height: 100vh;
+    width: var(--width);
+	height:auto;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #start{
@@ -56,22 +61,3 @@ button{
     align-items: center;
     justify-content: center;
 }
-
-#enemy-1 {
-	width: 256px;
-	height: 66px;
-	position: absolute;
-	left: 1650px;
-	top: 253px;
-    background-color: rgb(255, 0, 0);
-}
-
-#enemy-2 {
-	width: 165px;
-	height: 70px;
-	position: absolute;
-	left: 1750px;
-	top: 820px;
-    background-color: rgb(255, 0, 0);
-}
-

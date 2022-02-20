@@ -1,35 +1,26 @@
 :root{
     --sprite-friend: url(../assets/sprite-friend.png);
-    --prop: 0.4;
+    --proportion: 0.25;
+    --width-image-friend: calc(363px * var(--proportion));
+    --height-image-friend: calc(458px * var(--proportion));
+    --num-frames: 10;
     --speed: 0.8s;
-    --width-image: calc(363px * var(--prop));
-    --height-image: calc(458px * var(--prop));
-    --size: 1000%;
-    --size-image: calc(-3630px * var(--prop));
 }
 
 #friend {
-	width: var(--width-image);
-	height: var(--height-image);
+	width: var(--width-image-friend);
+	height: var(--height-image-friend);
 	position: absolute;
 	left: 10px;
-	top: 820px;
-    background-image: var(--sprite-friend);
-    background-size: var(--size);
-    background-repeat: no-repeat;
+	top: calc(var(--height) - calc(var(--height-image-friend)) - 60px);
 }
-
-.animationfriend{
+.animation-friend{
     background-image: var(--sprite-friend);
-    animation: playFriend var(--speed) steps(10) infinite;
-
-    /* -webkit-animation: play .5s steps(2) infinite;
-    -moz-animation: play .5s steps(2) infinite;
-    -ms-animation: play .5s steps(2) infinite;
-    -o-animation: play .5s steps(2) infinite; */
+    background-size: cover;
+    animation: playFriend var(--speed) steps(var(--num-frames)) infinite;
 }
 
 @keyframes playFriend {
     from {background-position: 0px;}
-    to {background-position: var(--size-image);}
+    to {background-position: calc(var(--width-image-friend) * var(--num-frames) * -1);}
 }

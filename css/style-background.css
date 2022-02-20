@@ -1,12 +1,8 @@
-:root{
-    --width: 1920px;
-    --height: 1040px;
-}
 
 #blur{
     backdrop-filter: blur(1px);
-    width: 1920px;
-    height: 1080px;
+    width: var(--width);
+    height: var(--height);
 }
 
 #parallax-7{
@@ -21,6 +17,7 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/6.png);
+    background-size: var(--width) var(--height) ;
 }
 
 #parallax-5{
@@ -28,6 +25,7 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/5.png);
+    background-size: var(--width) var(--height) ;
 }
 
 #parallax-4{
@@ -35,6 +33,7 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/4.png);
+    background-size: var(--width) var(--height) ;
 }
 
 #parallax-3{
@@ -42,6 +41,7 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/3.png);
+    background-size: var(--width) var(--height) ;
 }
 
 #parallax-2{
@@ -49,6 +49,7 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/2.png);
+    background-size: var(--width) var(--height) ;
 }
 
 #parallax-1{
@@ -56,4 +57,5 @@
     height: var(--height);
     position: absolute;
     background-image: url(../assets/parallax/1.png);
+    background-size: var(--width) var(--height) ;
 }
